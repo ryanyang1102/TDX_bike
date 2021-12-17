@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css' integrity='sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==' crossorigin='anonymous'/>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css' integrity='sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==' crossorigin='anonymous'/>
+  <link rel="stylesheet" href="css/all.css">
+  <title>TDX 自行車路線查詢</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row my-4">
+      <div class="col-12 col-md-4 mb-4">
+        <h4>台中市自行車路線查詢</h4>
+        <label for="bikeRoute" class="form-label">選擇路線</label>
+        <select id="bikeRoute" class="form-select" aria-selected="選擇自行車道下拉選單"></select>
+      </div>
+      <div class="col-12 col-md-8">
+        <div id="mapid"></div>
+      </div>
+    </div>
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.9.1/axios.min.js' integrity='sha512-Xk3wWei2TGrsh9kDSBKUMIjw/86sLUvhtnv9f7fOuIwhhiUTKz8szkWkzHthrM5Bb3Bu9idSzkxOrkzhcneuiw==' crossorigin='anonymous'></script>
+  <!-- leaflet 圖資 -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js' integrity='sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==' crossorigin='anonymous'></script>
+  <!-- "jsSHA" 串接 api 時，驗證函式加解密所需要的套件 -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.2.0/sha.min.js' integrity='sha512-/yIGjYJZIXZx10ig0yhbK41OiwcqBUxIj0xQJe+NwkMIdS/u07b6Mwo0nvXB4o7A6WiKnKOf92JwE5Ezo27u9Q==' crossorigin='anonymous'></script>
+  <!-- 地圖位置格式轉換的套件 wkt 格式轉 geoJSON -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/wicket/1.3.8/wicket.min.js' integrity='sha512-aaiN+QIXD0N9Id865vSDEfttZJV9v8ZGh7jXMnYI2zbZhkSYOulS4IH0u4pC61/KXT20UedYzL5xi5siIg6mlw==' crossorigin='anonymous'></script>
+  <script src="js/all.js"></script>
+</body>
+</html>
